@@ -8,7 +8,7 @@
               <VToolbarTitle>
                 {{ title }}
               </VToolbarTitle>
-              <Vspacer />
+              <VSpacer />
             </VToolbar>
             <VCardText>
               <VForm>
@@ -28,7 +28,7 @@
               </VForm>
             </VCardText>
             <VCardActions>
-              <Vspacer />
+              <VSpacer />
               <VBtn color="danger">
                 Login
               </VBtn>

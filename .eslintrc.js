@@ -30,7 +30,8 @@ module.exports = {
     'semi': 'off',
     'comma-dangle': 'off',
     'import/extensions': 'never',
-    'space-before-function-paren': 0
+    'space-before-function-paren': 0,
+    'vue/attribute-hyphenation': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint',
