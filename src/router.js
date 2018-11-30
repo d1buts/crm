@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import Home from './pages/Home'
+import DashBoardPage from './pages/DashBoardPage'
 import LoginPage from './pages/LoginPage'
 
 Vue.use(Router);
@@ -17,6 +18,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: LoginPage,
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: DashBoardPage,
     },
     {
       path: '/about',
