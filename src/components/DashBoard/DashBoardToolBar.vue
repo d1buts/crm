@@ -12,21 +12,37 @@
           Google Contacts
         </span>
     </VToolbarTitle>
-    <VTextField
+    <!--<VTextField
       flat
       solo-inverted
       hide-details
       prepend-inner-icon="search"
       label="Search"
       class="hidden-sm-and-down"
-    />
+    />-->
     <VSpacer />
-    <VBtn icon>
-      <VIcon>apps</VIcon>
-    </VBtn>
-    <VBtn icon>
-      <VIcon>notifications</VIcon>
-    </VBtn>
+    <VMenu offset-y>
+      <VBtn
+        slot="activator"
+        color="primary"
+        dark
+        icon
+      >
+        <VIcon>settings</VIcon>
+      </VBtn>
+      <VList>
+        <VListTile
+          v-for="(item, index) in menuList"
+          :key="index"
+          @click="item.callback"
+        >
+          <VListTileTitle>
+            <VIcon>{{ item.icon }}</VIcon>
+            {{ item.title }}
+          </VListTileTitle>
+        </VListTile>
+      </VList>
+    </VMenu>
   </VToolbar>
 </template>
 
@@ -39,6 +55,13 @@ export default {
       default: false
     }
   },
+  data: () => ({
+    menuList: [
+      { title: 'Доступи', callback: () => console.log('Доступи'), icon: 'fingerprint' },
+      { title: 'Особистий профіль', callback: () => console.log('Профіль'), icon: 'accessibility_new' },
+      { title: 'Вихід', callback: () => console.log('Вихід'), icon: 'exit_to_app' }
+    ],
+  }),
   methods: {
     toggleSideBar () {
       this.$emit('update:sideBarVisibility', !this.sideBarVisibility)

@@ -4,7 +4,10 @@
       <VLayout align-center justify-center>
         <VFlex xs12 sm8 md4>
           <VCard class="elevation-12">
-            <VToolbar dark color="primary">
+            <VToolbar
+              dark
+              color="blue darken-3"
+            >
               <VToolbarTitle>
                 {{ title }}
               </VToolbarTitle>

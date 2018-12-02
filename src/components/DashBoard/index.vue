@@ -4,9 +4,10 @@
     <DashBoardToolBar :sideBarVisibility.sync="sideBarVisibility" />
     <VContent>
       <VContainer fluid fill-height>
-        <VLayout justify-center align-center>
-          <h1>title</h1>
-        </VLayout>
+        <!--<VLayout justify-center align-center>-->
+        <h1>Dash board</h1>
+        <!--</VLayout>-->
+        <RouterView />
       </VContainer>
     </VContent>
     <VBtn
@@ -18,7 +19,7 @@
       fixed
       @click="showDialogModal"
     >
-      <VIcon>add</VIcon>
+      <VIcon>person_add</VIcon>
     </VBtn>
     <DashBoardDialogModal :dialogModalVisibility.sync="dialogModalVisibility" />
   </VApp>

@@ -79,9 +79,8 @@ export default {
   },
   data: () => ({
     items: [
-      { icon: 'contacts', text: 'Contacts' },
-      { icon: 'history', text: 'Frequently contacted' },
-      { icon: 'content_copy', text: 'Duplicates' },
+      { icon: 'people', text: 'Клієнти' },
+      { icon: 'content_copy', text: 'Розсилки' },
       {
         icon: 'keyboard_arrow_up',
         'icon-alt': 'keyboard_arrow_down',
@@ -103,12 +102,7 @@ export default {
           { text: 'Undo changes' },
           { text: 'Other contacts' }
         ]
-      },
-      { icon: 'settings', text: 'Settings' },
-      { icon: 'chat_bubble', text: 'Send feedback' },
-      { icon: 'help', text: 'Help' },
-      { icon: 'phonelink', text: 'App downloads' },
-      { icon: 'keyboard', text: 'Go to the old version' }
+      }
     ]
   }),
   computed: {
